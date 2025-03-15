@@ -1,0 +1,899 @@
+<!doctype html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fff">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Euphoria | Магазин</title>
+  <link rel="stylesheet" href="css/catalog.min.css?_v=20250315160255">
+</head>
+
+<body class="catalog">
+  <header class="header">
+    <div class="container header__container">
+      <a class="header__logo logo" href="#">
+        <img src="img/logo.svg" width="91" height="45" alt="Логотип Euphoria">
+      </a>
+      <div class="menu-overlay" data-menu-overlay></div>
+      <nav class="header__menu menu menu--right" data-menu>
+        <ul class="menu__list">
+          <li class="menu__item" data-menu-item>
+            <a class="hover menu__link" href="/index.html">Главная</a>
+          </li>
+          <li class="menu__item menu__item--current" data-menu-item>
+            <a class="hover menu__link" href="/catalog.html">Магазин</a>
+          </li>
+          <li class="menu__item" data-menu-item>
+            <a class="hover menu__link" href="#">Комбо</a>
+          </li>
+          <li class="menu__item" data-menu-item>
+            <a class="hover menu__link" href="#">Джоггеры</a>
+          </li>
+        </ul>
+      </nav>
+      <form class="header__searсh search" action="#">
+        <svg width="20" height="20">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+        <input class="search__input" type="text" placeholder="Поиск">
+      </form>
+      <ul class="header__user-nav user-nav">
+        <li class="user-nav__item">
+          <a class="hover-multi user-nav__link" href="#" aria-label="Перейти в Избранное">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="user-nav__item">
+          <a class="hover-multi user-nav__link" href="#" aria-label="Перейти в Профиль">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#user"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="user-nav__item">
+          <a class="hover-multi user-nav__link" href="#" aria-label="Перейти в Корзину">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger="">
+        <span class="burger__line"></span>
+        <span class="burger__click-area"></span>
+      </button>
+    </div>
+  </header>
+
+<main class="main">
+  <section class="catalog section">
+  <h1 class="visually-hidden">Каталог</h1>
+  <div class="container catalog__container">
+    <aside class="catalog__sidebar catalog__sidebar--left sidebar">
+  <form action="#">
+    <div class="dropdown dropdown--collapsed dropdown--open widget widget_categories" data-dropdown>
+      <div class="dropdown-trigger widget-wrap">
+        <h3 class="widget-title">Категории</h3>
+        <button class="widget-toggle" type="button">
+          Открыть
+          <svg width="16" height="20">
+            <use xlink:href="img/sprite.svg#down_arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="dropdown-list widget-content">
+        <ul>
+          <li>
+            <a href="#">Толстовки</a>
+          </li>
+          <li>
+            <a href="#">Свитшоты</a>
+          </li>
+          <li>
+            <a href="#">Футболки с принтом</a>
+          </li>
+          <li>
+            <a href="#">Простые футболки</a>
+          </li>
+          <li>
+            <a href="#">Майки</a>
+          </li>
+          <li>
+            <a href="#">Боксеры</a>
+          </li>
+          <li>
+            <a href="#">Футболки с рукавами</a>
+          </li>
+          <li>
+            <a href="#">Джоггеры</a>
+          </li>
+          <li>
+            <a href="#">Джинсы</a>
+          </li>
+          <li>
+            <a href="#">Шорты</a>
+          </li>
+          <li>
+            <a href="#">Блузки</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown dropdown--collapsed dropdown--open widget widget_price" data-dropdown>
+      <div class="dropdown-trigger widget-wrap">
+        <h3 class="widget-title">Цена</h3>
+        <button class="widget-toggle" type="button">
+          Открыть
+          <svg width="16" height="20">
+            <use xlink:href="img/sprite.svg#down_arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="dropdown-list widget-content">
+        <div class="range-slider">
+          <div class="range-slider__target"></div>
+          <div class="range-slider__inputs">
+            <label class="range-slider__label">
+              <input id="input-0" class="range-slider__input" min="500" max="30000" type="number">
+            </label>
+            <label class="range-slider__label">
+              <input id="input-1" class="range-slider__input" min="500" max="30000" type="number">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown dropdown--collapsed dropdown--open widget widget_colors" data-dropdown>
+      <div class="dropdown-trigger widget-wrap">
+        <h3 class="widget-title">Цвет</h3>
+        <button class="widget-toggle" type="button">
+          Открыть
+          <svg width="16" height="20">
+            <use xlink:href="img/sprite.svg#down_arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="dropdown-list widget-content">
+        <ul>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="violet">
+              <span class="color new-radio" style="background-color: #8434E1;"></span>
+              <span class="visually-hidden">Фиолетовый</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="black">
+              <span class="color new-radio" style="background-color: #252525;"></span>
+              <span class="visually-hidden">Чёрный</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="red">
+              <span class="color new-radio" style="background-color: #F35528;"></span>
+              <span class="visually-hidden">Красный</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="orange">
+              <span class="color new-radio" style="background-color: #F16F2B;"></span>
+              <span class="visually-hidden">Оранжевый</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="navy">
+              <span class="color new-radio" style="background-color: #345EFF;"></span>
+              <span class="visually-hidden">Синий</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="white">
+              <span class="color new-radio" style="background-color: #F4F1F1;"></span>
+              <span class="visually-hidden">Белый</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="broom">
+              <span class="color new-radio" style="background-color: #D67E3B;"></span>
+              <span class="visually-hidden">Дроковый</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="green">
+              <span class="color new-radio" style="background-color: #48BC4E;"></span>
+              <span class="visually-hidden">Зелёный</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="yellow">
+              <span class="color new-radio" style="background-color: #FDC761;"></span>
+              <span class="visually-hidden">Жёлтый</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="grey">
+              <span class="color new-radio" style="background-color: #E4E5E8;"></span>
+              <span class="visually-hidden">Серый</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="pink">
+              <span class="color new-radio" style="background-color: #E08D9D;"></span>
+              <span class="visually-hidden">Розовый</span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="color" value="blue">
+              <span class="color new-radio" style="background-color: #3FDEFF;"></span>
+              <span class="visually-hidden">Голубой</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown dropdown--collapsed dropdown--open widget widget_sizes" data-dropdown>
+      <div class="dropdown-trigger widget-wrap">
+        <h3 class="widget-title">Размер</h3>
+        <button class="widget-toggle" type="button">
+          Открыть
+          <svg width="16" height="20">
+            <use xlink:href="img/sprite.svg#down_arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="dropdown-list widget-content">
+        <ul>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="size" value="xxs">
+              <span class="radio-size">
+                xxs
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="size" value="xs">
+              <span class="radio-size">
+                xs
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="size" value="s">
+              <span class="radio-size">
+                s
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="size" value="m">
+              <span class="radio-size">
+                m
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="size" value="l">
+              <span class="radio-size">
+                l
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="size" value="xl">
+              <span class="radio-size">
+                xl
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="size" value="xxl">
+              <span class="radio-size">
+                xxl
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="size" value="3xl">
+              <span class="radio-size">
+                3xl
+              </span>
+            </label>
+          </li>
+          <li>
+            <label class="custom-radio">
+              <input class="native-radio" type="radio" name="size" value="4xl">
+              <span class="radio-size">
+                4xl
+              </span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown dropdown--collapsed dropdown--open widget widget_categories" data-dropdown>
+      <div class="dropdown-trigger widget-wrap">
+        <h3 class="widget-title">Стиль</h3>
+        <button class="widget-toggle" type="button">
+          Открыть
+          <svg width="16" height="20">
+            <use xlink:href="img/sprite.svg#down_arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="dropdown-list widget-content">
+        <ul>
+          <li>
+            <a href="#">Классический</a>
+          </li>
+          <li>
+            <a href="#">Повседневный</a>
+          </li>
+          <li>
+            <a href="#">Деловой</a>
+          </li>
+          <li>
+            <a href="#">Спорт</a>
+          </li>
+          <li>
+            <a href="#">Элегантный</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</aside>
+
+    <div class="catalog-products catalog__content">
+  <div class="catalog-props catalog__props">
+    <div class="catalog-props__header">
+      <h2 class="catalog-props__title">Женская одежда</h2>
+      <ul class="catalog-props__list">
+        <li class="catalog-props__item">
+          <a class="hover catalog-props__link" href="#">
+            Новинки
+          </a>
+        </li>
+        <li class="catalog-props__item">
+          <a class="hover catalog-props__link" href="#">
+            С этим покупают
+          </a>
+        </li>
+      </ul>
+      <button class="filters" aria-label="Открыть фильтры" aria-expanded="false">
+        <svg width="20" height="20">
+          <use xlink:href="img/sprite.svg#filter"></use>
+        </svg>
+        <span class="filters__click-area"></span>
+      </button>
+    </div>
+  </div>
+  <div class="catalog__wrapper">
+    <ul class="catalog__list">
+      <li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image2_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image2_2x.jpg" alt="Чёрная толстовка с принтом"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Чёрная толстовка с принтом</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          2 330 <span class="currency">₽</span>
+        </ins>
+
+        <del class="price__old">
+          3 200 <span class="currency">₽</span>
+        </del>
+
+      </div>
+      <span class="product-card__category">
+        Толстовки
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image12_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image12_2x.jpg" alt="Белая футболка без рукавов"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Белая футболка без рукавов</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          1 218 <span class="currency">₽</span>
+        </ins>
+
+      </div>
+      <span class="product-card__category">
+        Простые футболки
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image1_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image1_2x.jpg" alt="Толстовка Levender с капюшоном"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Толстовка Levender с капюшоном</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          2 400 <span class="currency">₽</span>
+        </ins>
+
+      </div>
+      <span class="product-card__category">
+        Толстовки
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image10_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image10_2x.jpg" alt="Блузка с рисунком"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Блузка с рисунком</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          2 796 <span class="currency">₽</span>
+        </ins>
+
+        <del class="price__old">
+          4 610 <span class="currency">₽</span>
+        </del>
+
+      </div>
+      <span class="product-card__category">
+        Блузки
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image11_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image11_2x.jpg" alt="Футболка с принтом"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Футболка с принтом</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          2 300 <span class="currency">₽</span>
+        </ins>
+
+      </div>
+      <span class="product-card__category">
+        Футболки с принтом
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image4_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image4_2x.jpg" alt="Чёрные спортивные шорты"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Чёрные спортивные шорты</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          2 977 <span class="currency">₽</span>
+        </ins>
+
+      </div>
+      <span class="product-card__category">
+        Шорты
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image9_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image9_2x.jpg" alt="Серый свитшот Barboreal"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Серый свитшот Barboreal</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          3 500 <span class="currency">₽</span>
+        </ins>
+
+      </div>
+      <span class="product-card__category">
+        Свитшоты
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image8_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image8_2x.jpg" alt="Жёлтый свитшот с капюшоном"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Жёлтый свитшот с капюшоном</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          3 800 <span class="currency">₽</span>
+        </ins>
+
+      </div>
+      <span class="product-card__category">
+        Свитшоты
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image7_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image7_2x.jpg" alt="Футболка с цветами"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Футболка с цветами</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          800 <span class="currency">₽</span>
+        </ins>
+
+        <del class="price__old">
+          1 599 <span class="currency">₽</span>
+        </del>
+
+      </div>
+      <span class="product-card__category">
+        Футболки с принтом
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image6_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image6_2x.jpg" alt="Футболка Coco Caf"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Футболка Coco Caf</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          1 500 <span class="currency">₽</span>
+        </ins>
+
+      </div>
+      <span class="product-card__category">
+        Футболки с принтами
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image5_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image5_2x.jpg" alt="Блузка с рисунком"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Блузка с рисунком</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          2 600 <span class="currency">₽</span>
+        </ins>
+
+      </div>
+      <span class="product-card__category">
+        Блузки
+      </span>
+    </div>
+  </article>
+</li>
+<li class="catalog__item">
+  <article class="img-scale product-card">
+    <div class="product-card__image">
+      <button class="favorite product-card__favorite" aria-label="Добавить в избранное">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#heart"></use>
+        </svg>
+        <span class="favorite__click-area"></span>
+      </button>
+      <picture><source srcset="img/products/image3_2x.webp" type="image/webp"><img class="img-responsive" width="282" height="370" src="img/products/image3_2x.jpg" alt="Чёрная толстовка с узором"></picture>
+    </div>
+    <div class="product-card__content">
+      <h3 class="product-card__title text-truncate">
+        <a class="hover" href="/single-product.html">Чёрная толстовка с узором</a>
+      </h3>
+      <div class="price product-card__price">
+        <ins class="price__current">
+          2 330 <span class="currency">₽</span>
+        </ins>
+
+      </div>
+      <span class="product-card__category">
+        Толстовки
+      </span>
+    </div>
+  </article>
+</li>
+
+    </ul>
+  </div>
+</div>
+
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="footer-top footer__top">
+    <div class="container footer__container">
+      <div class="footer__columns grid">
+        <div class="dropdown dropdown--footer footer__column" data-dropdown>
+          <div class="dropdown-trigger footer__header-wrap">
+            <h4 class="footer__header">Помощь</h4>
+            <button class="dropdown-toggle footer__toggle" type="button">
+              Открыть
+            </button>
+          </div>
+          <div class="dropdown-list">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Связаться с нами</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Статус заказа</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Гарантии и возврат</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Вопросы и ответы</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Вакансии</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown dropdown--footer footer__column" data-dropdown>
+          <div class="dropdown-trigger footer__header-wrap">
+            <h4 class="footer__header">Компания</h4>
+            <button class="dropdown-toggle footer__toggle" type="button">
+              Открыть
+            </button>
+          </div>
+          <div class="dropdown-list">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>О компании</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Блог</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Наши магазины</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Сотрудничество</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Медия</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown dropdown--footer footer__column" data-dropdown>
+          <div class="dropdown-trigger footer__header-wrap">
+            <h4 class="footer__header">Больше</h4>
+            <button class="dropdown-toggle footer__toggle" type="button">
+              Открыть
+            </button>
+          </div>
+          <div class="dropdown-list">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Сроки и условия</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Конфиденциальность</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Политика доставки</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="hover-underline" href="#"><span>Карта сайта</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown dropdown--footer footer__column footer__column--contacts" data-dropdown>
+          <div class="dropdown-trigger footer__header-wrap">
+            <h4 class="footer__header">Контакты</h4>
+            <button class="dropdown-toggle footer__toggle" type="button">
+              Открыть
+            </button>
+          </div>
+          <div class="dropdown-list footer__info">
+            <a class="hover-underline" href="#"><span>support@euphoria.ru</span></a>
+            <address>
+              Россия, г. Владимир, ул. Кирова, д. 7
+            </address>
+          </div>
+        </div>
+        <div class="footer__column footer__column--social">
+          <h4 class="visually-hidden footer__header">Соц.сети</h4>
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a class="hover-multi" href="#" aria-label="Facebook">
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="hover-multi" href="#" aria-label="Instagram">
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#inst"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="hover-multi" href="#" aria-label="Twitter">
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#tw"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="hover-multi" href="#" aria-label="LinkedIn">
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#lind"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--app">
+          <h4 class="footer__header">Скачать приложение</h4>
+          <ul class="footer__list footer__list--app">
+            <li class="footer__item">
+              <a href="#" aria-label="Скачать приложение в Play Market">
+                <img src="img/play_market.svg" alt="Play Market">
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" aria-label="Скачать приложение в App Store">
+                <img src="img/app_store.svg" alt="App Store">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom footer__bottom">
+    <div class="container footer-bottom__container">
+      <p class="footer-bottom__copy">
+        © 2025 Euphoria. Все права защищены.
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="js/app.min.js?_v=20250315160255"></script>
+</body>
+
+</html>
